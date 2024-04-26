@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { IoMdCheckmark } from "react-icons/io";
 import TouristCard from "./TouristCard";
 import AllCard from "./AllCard";
 
 
 const AllTouristsSpot = () => {
     const loadedTourists = useLoaderData();
-    console.log(loadedTourists);
+    // console.log(loadedTourists);
   const [tourists,setTourists] = useState([]);
   useEffect(() =>{
     fetch('http://localhost:5000/tourist')
@@ -15,11 +16,56 @@ const AllTouristsSpot = () => {
         setTourists(data);
     })
   },[])
+
+
+  const [cost, setCost] = useState([]);
+  
+  useEffect(() => {
+    fetch('http://localhost:5000/tourist')
+    .then(res => res.json())
+    .then(data =>{
+        setCost(data)
+        // console.log(data)
+    })
+  }, []);
+  
+  
+
+
+    const sortByAverageCost = () => {
+        const sortedCost = [...cost].sort((a, b) => b.averageCost - a.averageCost);
+        
+        setCost(sortedCost);
+        
+      };
+
+
+
+
+
+
+
+
     return (
         <div>
+
+<details className="dropdown">
+          
+          <summary className="m-1 btn bg-[#23BE0A] text-white flex"><span>Sort By</span> <span className='text-2xl'><IoMdCheckmark /></span> </summary>
+        <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-box w-52">
+          <li><a onClick={sortByAverageCost}>cost</a></li>
+          {/* <li><a onClick={sortByPages}>Number of Pages</a></li>
+          <li><a onClick={sortByYear}>Publisher Year</a></li> */}
+        </ul>
+      </details>
+
+
+
+
+
              <h2>Tourists Length:{tourists.length}</h2>
             <div>
-            <div className='grid md:grid-cols-3 gap-4'>
+            <div className='grid mt-20 md:grid-cols-3 gap-4'>
       {
          tourists.map(tourist => <AllCard key={tourist._id} tourist={tourist} tourists={tourists} setTourists={setTourists}></AllCard>)
       }

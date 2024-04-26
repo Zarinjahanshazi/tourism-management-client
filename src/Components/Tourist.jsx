@@ -1,36 +1,23 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { IoMdCheckmark } from "react-icons/io";
+
 import { IoMdTime } from "react-icons/io";
 import { FaSackDollar } from "react-icons/fa6";
 import { TiWeatherCloudy } from "react-icons/ti";
 import { CiLocationOn } from "react-icons/ci";
+// import { useEffect, useState } from "react";
 
 
 const Tourist = () => {
     const {_id} = useParams();
     const spots = useLoaderData();
 
-
-    // const sortByRating = () => {
-    //     const sortedBooks = [...readBooks].sort((a, b) => b.rating - a.rating);
-    //     const sortedWishList = [...wishListBooks].sort((a, b) => b.rating - a.rating);
-    //     setReadBooks(sortedBooks);
-    //     setWishListBooks(sortedWishList);
-    //   };
+   
     
     
     console.log(spots.countryName)
     return (
         <div>
-            <details className="dropdown">
-          
-          <summary className="m-1 btn bg-[#23BE0A] text-white flex"><span>Sort By</span> <span className='text-2xl'><IoMdCheckmark /></span> </summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-          {/* <li><a onClick={sortByRating}>Rating</a></li> */}
-          {/* <li><a onClick={sortByPages}>Number of Pages</a></li>
-          <li><a onClick={sortByYear}>Publisher Year</a></li> */}
-        </ul>
-      </details>
+            
 
 
 

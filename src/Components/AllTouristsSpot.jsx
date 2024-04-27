@@ -18,24 +18,21 @@ const AllTouristsSpot = () => {
   },[])
 
 
-  const [cost, setCost] = useState([]);
+  const [sortAvg,setSortAvg] = useState("sortBy")
+
+
+  // const [cost, setCost] = useState([]);
   
-  useEffect(() => {
-    fetch('http://localhost:5000/tourist')
-    .then(res => res.json())
-    .then(data =>{
-        setCost(data)
-        // console.log(data)
-    })
-  }, []);
+ 
   
   
 
 
     const sortByAverageCost = () => {
-        const sortedCost = [...cost].sort((a, b) => b.averageCost - a.averageCost);
+      setSortAvg("dicending")
+        const sortedCost = [...tourists].sort((a, b) => b.averageCost - a.averageCost);
         
-        setCost(sortedCost);
+        setTourists(sortedCost);
         
       };
 
@@ -54,8 +51,8 @@ const AllTouristsSpot = () => {
           <summary className="m-1 btn bg-[#23BE0A] text-white flex"><span>Sort By</span> <span className='text-2xl'><IoMdCheckmark /></span> </summary>
         <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-box w-52">
           <li><a onClick={sortByAverageCost}>cost</a></li>
-          {/* <li><a onClick={sortByPages}>Number of Pages</a></li>
-          <li><a onClick={sortByYear}>Publisher Year</a></li> */}
+          {/* <li><a >1</a></li>
+          <li><a >3</a></li> */}
         </ul>
       </details>
 
@@ -67,7 +64,7 @@ const AllTouristsSpot = () => {
             <div>
             <div className='grid mt-20 md:grid-cols-3 gap-4'>
       {
-         tourists.map(tourist => <AllCard key={tourist._id} tourist={tourist} tourists={tourists} setTourists={setTourists}></AllCard>)
+         tourists.map(tourist => <AllCard key={tourist._id} sortByAverageCost={() =>sortByAverageCost(tourist.averageCost)} tourist={tourist} tourists={tourists} setTourists={setTourists}></AllCard>)
       }
       </div>
 

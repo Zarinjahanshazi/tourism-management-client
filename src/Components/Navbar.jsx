@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import { RxAvatar } from "react-icons/rx";
+import { MdOutlineTravelExplore } from "react-icons/md";
 
 
 const Navbar = () => {
@@ -66,7 +67,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-[16px] md:text-2xl">Ocean Heaven</a>
+          <a className="btn btn-ghost text-[16px] md:text-2xl"> <span><p className="font-extrabold text-[30px] text-green-500"><MdOutlineTravelExplore /></p></span>TouristTrekker</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>

@@ -1,7 +1,24 @@
 import Swal from "sweetalert2";
+import { Dropdown, Menu } from 'daisyui';
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../Providers/AuthProviders";
 
 
 const AddTouristsSpot = () => {
+  const {user} = useContext(AuthContext)
+ const [myMail,setMyMail] = useState([]);
+ const[myName,setMyName] = useState([]);
+
+
+  useEffect(() =>{
+    
+    setMyMail(user?.email);
+    setMyName(user?.name);
+
+  },[user])
+
+  console.log(myMail,myName);
+  
 
     const handleAddCoffee = event =>{
         event.preventDefault();
@@ -59,13 +76,13 @@ const AddTouristsSpot = () => {
           <label className="label">
             <span className="label-text">User Name</span>
           </label>
-          <input type="text" name="name" placeholder="User name" className="input input-bordered w-full" required />
+          <input name='email' type="text" placeholder="User Email" defaultValue={user?.email} readOnly={user.email ? true : false} className="input input-bordered" required />
         </div>
         <div className="form-control md:w-1/2 ml-4">
           <label className="label">
             <span className="label-text">User Email</span>
           </label>
-          <input type="email" name="email" placeholder="User Email" className="input input-bordered w-full" required />
+          {/* <input type="email" name="email" placeholder="User Email" className="input input-bordered w-full" required /> */}
         
         </div>
        </div>
@@ -81,7 +98,7 @@ const AddTouristsSpot = () => {
           <label className="label">
             <span className="label-text">Country Name</span>
           </label>
-          <input type="text" name="countryName" placeholder="Country_Name" className="input input-bordered w-full" required />
+          <input type="text" name="countryName" placeholder="Country_Name"  className="input input-bordered w-full" required />
         
         </div>
        </div>

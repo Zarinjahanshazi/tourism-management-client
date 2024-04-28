@@ -99,16 +99,33 @@ const Navbar = () => {
 
        
 
-            <button className="">
+           <div className="flex">
+           {
+              user?<span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]" onClick={handleSignOut}>Logout</span>:<>
+              <button className="">
                 <Link to="/login">
-                  {user && user ? (
-                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]" onClick={handleSignOut}>Logout</span>
-                  ) : (
+
+                
                     <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]">Login</span>
-                  )}
+                  
                 </Link>
                 
               </button>
+            <button className="">
+                <Link to="/register">
+                    
+                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]">register</span>
+                  
+                </Link>
+                
+              </button>
+
+
+              </>
+
+
+           }
+           </div>
       </div>
       </div>
             

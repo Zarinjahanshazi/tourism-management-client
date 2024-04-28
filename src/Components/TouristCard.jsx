@@ -11,7 +11,7 @@ const TouristCard = ({tourist,setTourists,tourists}) => {
             <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{countryName}</h2>
+                <h2 className="card-title">Country Name:{countryName}</h2>
                     <div className="flex">
                         <p>Name:{name}</p>
                         <p>Email:{email}</p>

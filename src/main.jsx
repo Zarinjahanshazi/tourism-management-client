@@ -17,6 +17,8 @@ import MyLIst from './Components/MyLIst.jsx';
 import UpdateTourists from './Components/UpdateTourists.jsx';
 import Home from './Components/Home.jsx';
 import Tourist from './Components/Tourist.jsx';
+import ViewCountry from './Components/ViewCountry.jsx';
+import DetailsCountery from './Components/DetailsCountery.jsx';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,17 @@ const router = createBrowserRouter([
     element:<UpdateTourists></UpdateTourists>
 
   },
+  {
+    path:'/viewCountry/:name',
+    element:<ViewCountry></ViewCountry>,
+    loader:({params}) =>fetch(`http://localhost:5000/country/${params.name}`)
+  },
+  // {
+  //   path:'/countryDetails/:id',
+  //   element:<DetailsCountery></DetailsCountery>,
+  //   loader:({params}) =>fetch(`http://localhost:5000/country/${params.id}`)
+
+  // }
 
   ]
 

@@ -5,6 +5,7 @@ import Countries from "./Countries";
 import { MdHomeWork } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 
@@ -192,7 +193,7 @@ const Home = () => {
 							</div>
 							<div className="ml-4">
 								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Destination Discovery Quiz</h4>
-								<p className="mt-2 dark:text-gray-600"> Create a fun and interactive quiz that helps users discover their ideal travel destinations based on their preferences, interests, and travel style. The quiz can recommend personalized travel experiences and itineraries tailored to each user's profile.</p>
+								<p className="mt-2 dark:text-gray-600"> Create a fun and interactive quiz that helps users discover their ideal travel destinations based on their preferences, interests, and travel style. The quiz can recommend personalized travel experiences and itineraries tailored to each user profile.</p>
 							</div>
 						</div>
 					</div>
@@ -227,6 +228,7 @@ const Home = () => {
                     </div>
 
                     <div className="mr-10">
+                      <Fade direction="down" triggerOnce={true}>
                         <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold">Contact With Us</h2>
                         <div className="mt-10 text-black">
                             <div className="card bg-base-100 shadow-xl">
@@ -235,7 +237,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
+                        </Fade>
+                         <Fade direction="up" triggerOnce={true}> 
                         <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mt-16">Contact With Us</h2>
                         <div className="mt-10 text-black">
                             <div className="card bg-base-100 shadow-xl">
@@ -248,6 +251,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        </Fade>
                     </div>
                 </div>
             </div>

@@ -32,6 +32,7 @@ const UpdateTourists = () => {
 
     const handleUpdate = ( event) =>{
         event.preventDefault();
+        console.log(_id);
 
 
         const form = event.target;
@@ -85,13 +86,13 @@ const UpdateTourists = () => {
           <label className="label">
             <span className="label-text">Tourists Spot Name</span>
           </label>
-          <input type="text"  name="touristsSpotName"  placeholder="tourists_spot_name" className="input input-bordered w-full" required />
+          <input type="text"  name="touristsSpotName" defaultValue={touristsSpotName}  placeholder="tourists_spot_name" className="input input-bordered w-full"  />
         </div>
         <div className="form-control md:w-1/2 ml-4">
           <label className="label">
             <span className="label-text">Country Name</span>
           </label>
-          <input type="text" name="countryName" placeholder="Country_Name" className="input input-bordered w-full" required />
+          <input type="text" name="countryName" defaultValue={countryName} placeholder="Country_Name"  className="input input-bordered w-full"  />
         
         </div>
        </div>
@@ -101,13 +102,13 @@ const UpdateTourists = () => {
           <label className="label">
             <span className="label-text">Location</span>
           </label>
-          <input type="text" name="location" placeholder="location" className="input input-bordered w-full" required />
+          <input type="text" name="location" defaultValue={location} placeholder="location" className="input input-bordered w-full"  />
         </div>
         <div className="form-control md:w-1/2 ml-4">
           <label className="label">
             <span className="label-text">short description</span>
           </label>
-          <input type="text" name="shortDescription" placeholder="short description" className="input input-bordered w-full" required />
+          <input type="text" name="shortDescription" defaultValue={shortDescription} placeholder="short description" className="input input-bordered w-full" />
         
         </div>
        </div>
@@ -117,13 +118,13 @@ const UpdateTourists = () => {
           <label className="label">
             <span className="label-text">Average Cost</span>
           </label>
-          <input type="text" name="averageCost" placeholder="Average Cost" className="input input-bordered w-full" required />
+          <input type="text" name="averageCost" defaultValue={averageCost} placeholder="Average Cost" className="input input-bordered w-full"  />
         </div>
         <div className="form-control md:w-1/2 ml-4">
           <label className="label">
             <span className="label-text">Seasonality </span>
           </label>
-          <input type="text" name="seasonality" placeholder="Seasonality " className="input input-bordered w-full" required />
+          <input type="text" name="seasonality" defaultValue={seasonality} placeholder="Seasonality " className="input input-bordered w-full"  />
         
         </div>
        </div>
@@ -133,13 +134,13 @@ const UpdateTourists = () => {
           <label className="label">
             <span className="label-text">Travel Time</span>
           </label>
-          <input type="text" name="travelTime" placeholder="Travel Time" className="input input-bordered w-full" required />
+          <input type="text" name="travelTime" defaultValue={travelTime} placeholder="Travel Time" className="input input-bordered w-full"  />
         </div>
         <div className="form-control md:w-1/2 ml-4">
           <label className="label">
             <span className="label-text">Total Visitors Per Year</span>
           </label>
-          <input type="text" name="totalVisitorsPerYear" placeholder="Total Visitors Per Year" className="input input-bordered w-full" required />
+          <input type="text" name="totalVisitorsPerYear" defaultValue={totalVisitorsPerYear} placeholder="Total Visitors Per Year" className="input input-bordered w-full"  />
         
         </div>
        </div>
@@ -149,7 +150,7 @@ const UpdateTourists = () => {
           <label className="label">
             <span className="label-text">Image URL</span>
           </label>
-          <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" required />
+          <input type="text" name="photo" defaultValue={photo} placeholder="Photo URL" className="input input-bordered w-full"  />
         </div>
         
        </div>

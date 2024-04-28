@@ -5,6 +5,7 @@ import { RxAvatar } from "react-icons/rx";
 import { MdOutlineTravelExplore } from "react-icons/md";
 
 
+
 const Navbar = () => {
     const { user, logOut, profilePicture } = useContext(AuthContext);
   const[currentuser,setCurrentUser] = useState()

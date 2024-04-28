@@ -5,6 +5,8 @@ import Countries from "./Countries";
 import { MdHomeWork } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import React from 'react'
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Home = () => {
@@ -82,13 +84,27 @@ const Home = () => {
           <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
 		<div>
-			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-900">Features of TouristTrekker</h2>
-			<p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-600">Quando cetero his ne, eum admodum sapientem ut.</p>
+			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-900">
+      <span style={{ color: 'purple', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Features of TouristTrekker']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+      
+      </h2>
+		
 		</div>
 		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 			<div>
-				<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">Ad vix debet docendi</h3>
-				<p className="mt-3 text-lg dark:text-gray-600">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+				
 				<div className="mt-12 space-y-12">
 					<div className="flex">
 						<div className="flex-shrink-0">
@@ -99,8 +115,8 @@ const Home = () => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Per ei quaeque sensibus</h4>
-							<p className="mt-2 dark:text-gray-600">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Destination Pages</h4>
+							<p className="mt-2 dark:text-gray-600">Create dedicated pages for each destination, providing comprehensive information such as attractions, accommodations, dining options, local culture, and travel tips. </p>
 						</div>
 					</div>
 					<div className="flex">
@@ -112,8 +128,8 @@ const Home = () => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Cu imperdiet posidonium sed</h4>
-							<p className="mt-2 dark:text-gray-600">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Multilingual Support</h4>
+							<p className="mt-2 dark:text-gray-600">Cater to international travelers by offering multilingual support, allowing users to access content in their preferred language. Provide translations for key information and communication channels.</p>
 						</div>
 					</div>
 					<div className="flex">
@@ -125,21 +141,20 @@ const Home = () => {
 							</div>
 						</div>
 						<div className="ml-4">
-							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Nulla omittam sadipscing mel ne</h4>
-							<p className="mt-2 dark:text-gray-600">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Customized Travel Guides and Itineraries</h4>
+							<p className="mt-2 dark:text-gray-600">Offer personalized travel guides and suggested itineraries based on different interests, budgets, and travel styles. Provide insider tips, off-the-beaten-path recommendations, and downloadable itineraries for convenience.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div aria-hidden="true" className="mt-10 lg:mt-0">
-				<img src="https://source.unsplash.com/random/360x480" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+				<img src="https://i.ibb.co/dcJ973J/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
 			</div>
 		</div>
 		<div>
 			<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
 				<div className="lg:col-start-2">
-					<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">Eam nibh gloriatur ex</h3>
-					<p className="mt-3 text-lg dark:text-gray-600">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+					
 					<div className="mt-12 space-y-12">
 						<div className="flex">
 							<div className="flex-shrink-0">
@@ -150,8 +165,8 @@ const Home = () => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Cibo augue offendit has ad</h4>
-								<p className="mt-2 dark:text-gray-600">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Accessibility Features</h4>
+								<p className="mt-2 dark:text-gray-600">Ensure the website complies with accessibility standards and includes features such as alt text for images, keyboard navigation, and adjustable font sizes. This ensures that all users, including those with disabilities, can access and navigate the website easily.</p>
 							</div>
 						</div>
 						<div className="flex">
@@ -163,8 +178,8 @@ const Home = () => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">At eum ferri luptatum lobortis</h4>
-								<p className="mt-2 dark:text-gray-600">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Social Media Integration</h4>
+								<p className="mt-2 dark:text-gray-600">Integrate social media buttons and feeds to encourage users to share content and engage with your brand on platforms like Facebook, Instagram, and Twitter. Showcase user-generated content and foster a sense of community.</p>
 							</div>
 						</div>
 						<div className="flex">
@@ -176,14 +191,14 @@ const Home = () => {
 								</div>
 							</div>
 							<div className="ml-4">
-								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Dicunt verterem evertitur eu sea</h4>
-								<p className="mt-2 dark:text-gray-600">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Destination Discovery Quiz</h4>
+								<p className="mt-2 dark:text-gray-600"> Create a fun and interactive quiz that helps users discover their ideal travel destinations based on their preferences, interests, and travel style. The quiz can recommend personalized travel experiences and itineraries tailored to each user's profile.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-					<img src="https://source.unsplash.com/random/361x481" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+					<img src="https://i.ibb.co/7nQ7Yxw/people-portrait-with-plane-flying-sky.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
 				</div>
 			</div>
 		</div>

@@ -18,7 +18,8 @@ import UpdateTourists from './Components/UpdateTourists.jsx';
 import Home from './Components/Home.jsx';
 import Tourist from './Components/Tourist.jsx';
 import ViewCountry from './Components/ViewCountry.jsx';
-import DetailsCountery from './Components/DetailsCountery.jsx';
+import PrivateRoute from './Components/PrivateRoute.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
     },
     {
       path:'/addTourists',
-      element:<AddTouristsSpot></AddTouristsSpot>
+      element:<PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>
     },
     {
       path:'/allTourists',
@@ -54,11 +55,11 @@ const router = createBrowserRouter([
     },
     {
       path:'/myList',
-      element:<MyLIst></MyLIst>
+      element:<PrivateRoute><MyLIst></MyLIst></PrivateRoute>
     },
     {
       path:'/updateTourists',
-      element:<UpdateTourists></UpdateTourists>
+      element:<PrivateRoute><UpdateTourists></UpdateTourists></PrivateRoute>
     },
   {
     path:'/tourist/:id',

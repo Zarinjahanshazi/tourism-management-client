@@ -7,13 +7,13 @@ import Footer from './Components/Footer'
 function App() {
   
   return (
-    <>
+    <div className="max-w-6xl mx-auto">
       <Navbar></Navbar>
       
       <Outlet></Outlet>
       <Footer></Footer>
       
-    </>
+    </div>
   )
 }
 

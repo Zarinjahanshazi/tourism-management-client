@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -17,10 +18,10 @@ const Footer = () => {
             </aside> 
             <nav>
                 <div className="grid grid-flow-col gap-4 text-[30px]">
-                <a><p><FaFacebook /></p></a>
-                <a><p><FaInstagram /></p></a>
-                <a><p><FaLinkedin /></p></a>
-                <a><p><FaTwitter /></p></a>
+                <NavLink to='https://www.facebook.com/zarin.shazi.3'><a><p><FaFacebook /></p></a></NavLink>
+                <NavLink to='https://www.instagram.com/'><a><p><FaInstagram /></p></a></NavLink>
+                <NavLink to='https://www.linkedin.com/feed/'><a><p><FaLinkedin /></p></a></NavLink>
+                <NavLink to='https://twitter.com/i/flow/login'><a><p><FaTwitter /></p></a></NavLink>
                 </div>
             </nav>
             </footer>

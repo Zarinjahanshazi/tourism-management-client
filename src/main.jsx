@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: () =>fetch('http://localhost:5000/tourist')
+        loader: () =>fetch('https://tourism-management-server-three.vercel.app/tourist')
       },
       {
         path:'/register',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     {
       path:'/allTourists',
       element:<AllTouristsSpot></AllTouristsSpot>,
-      loader: () =>fetch('http://localhost:5000/tourist')
+      loader: () =>fetch('https://tourism-management-server-three.vercel.app/tourist')
     },
     {
       path:'/myList',
@@ -63,23 +63,23 @@ const router = createBrowserRouter([
     },
   {
     path:'/tourist/:id',
-    element:<Tourist></Tourist>,
-    loader: ({params}) =>fetch(`http://localhost:5000/tourist/${params.id}`)
+    element:<PrivateRoute><Tourist></Tourist></PrivateRoute>,
+    loader: ({params}) =>fetch(`https://tourism-management-server-three.vercel.app/tourist/${params.id}`)
   },
   {
     path:'/updateTourist/:id',
-    element:<UpdateTourists></UpdateTourists>
+    element:<PrivateRoute><UpdateTourists></UpdateTourists></PrivateRoute>
 
   },
   {
     path:'/viewCountry/:name',
     element:<ViewCountry></ViewCountry>,
-    loader:({params}) =>fetch(`http://localhost:5000/country/${params.name}`)
+    loader:({params}) =>fetch(`https://tourism-management-server-three.vercel.app/country/${params.name}`)
   },
   // {
   //   path:'/countryDetails/:id',
   //   element:<DetailsCountery></DetailsCountery>,
-  //   loader:({params}) =>fetch(`http://localhost:5000/country/${params.id}`)
+  //   loader:({params}) =>fetch(`https://tourism-management-server-three.vercel.app/country/${params.id}`)
 
   // }
 

@@ -4,6 +4,8 @@ import { IoMdTime } from "react-icons/io";
 import { FaSackDollar } from "react-icons/fa6";
 import { TiWeatherCloudy } from "react-icons/ti";
 import { CiLocationOn } from "react-icons/ci";
+import { IoIosPeople } from "react-icons/io";
+import { FaLocationArrow } from "react-icons/fa";
 // import { useEffect, useState } from "react";
 
 
@@ -23,31 +25,33 @@ const Tourist = () => {
 
             <div className="lg:grid lg:grid-cols-2 gap-10">
                 <div>
-                        <img className="rounded-2xl w-[700px] h-[600px]" src={spots.photo} alt="" />
+                        <img className="rounded-2xl w-[600px] h-[500px]" src={spots.photo} alt="" />
+                        
                 </div>
-
+                
                 <div className="">
                     <h1 className="text-[#131313] font-bold text-4xl">User Name:{spots.name}</h1>
                     <h4 className="text-base font-medium py-4">User Email:{spots.email}</h4>
+                    <h4 className="text-base font-medium py-4">Country Name:{spots.countryName}</h4>
                     <p className='border-b-2'></p>
                     {/* <h3 className="text-base font-medium py-4">{book.category}</h3> */}
                     <p className='border-b-2'></p>
                     <h1 className="py-4"><span className="font-bold text-base">Description:</span>{spots.shortDescription}</h1>
 
                     <p className='border-b-2 '></p>
-                    <div className="flex gap-10">
-                    <p className="flex items-center"><span><FaSackDollar /></span>{spots.averageCost}</p>
-                    <p className="flex items-center"><span><IoMdTime /></span>{spots.travelTime}</p>
+                    <div className="flex py-4 gap-10">
+                    <p className="flex gap-1 items-center text-base"><span className="font-bold">Average Cost:</span>{spots.averageCost}<span className="text-purple-500 text-base"><FaSackDollar /></span></p>
+                    <p className="flex items-center gap-1 text-base"><span className="font-bold">Travel Time:</span> {spots.travelTime}<span className="text-purple-500 font-bold text-base"><IoMdTime /></span></p>
                 </div>
                 <p className="border-b-2"></p>
-                <div className="flex gap-10">
-                    <p className="flex items-center">Location:{spots.location}</p>
-                    <p className="flex items-center">Visitors:{spots.totalVisitorsPerYear}</p>
+                <div className="flex gap-10 py-4">
+                    <p className="flex gap-1  items-center"><span className="font-bold">Location:</span>{spots.location}<span className="text-purple-500 font-extrabold text-base"><CiLocationOn /></span></p>
+                    <p className="flex gap-1 items-center"> <span className="font-bold">Visitors:</span>{spots.totalVisitorsPerYear} <span className="text-purple-500 font-bold text-base"><IoIosPeople /></span></p>
                 </div>
                 <p className="border-b-2"></p>
-                <div className="flex gap-10">
-                    <p className="flex items-center"><span><CiLocationOn /></span>{spots.touristsSpotName}</p>
-                    <p className="flex items-center"><span><TiWeatherCloudy /></span>{spots.seasonality}</p>
+                <div className="flex py-4 gap-10">
+                    <p className="flex gap-1 items-center"><span className="font-bold">Spot:</span>{spots.touristsSpotName} <span className="text-purple-500 text-base"><FaLocationArrow /></span> </p>
+                    <p className="flex gap-1 items-center"><span className="font-bold">Seasonality:</span> {spots.seasonality} <span className="text-purple-500 text-xl font-bold"><TiWeatherCloudy /></span></p>
                 </div>
                 
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Typewriter } from 'react-simple-typewriter'
 import Swal from "sweetalert2";
 
 
@@ -11,7 +12,7 @@ const UpdateTourists = () => {
     const [load, setLoad] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tourist')
+        fetch('https://tourism-management-server-three.vercel.app/tourist')
             .then(res => res.json())
             .then(data => {
                 const one = data.find(f => f._id === id);
@@ -50,7 +51,7 @@ const UpdateTourists = () => {
         console.log(update);
 
 
-        fetch(`http://localhost:5000/tourist/${_id}`,{
+        fetch(`https://tourism-management-server-three.vercel.app/tourist/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type':'application/json'
@@ -77,8 +78,24 @@ const UpdateTourists = () => {
 
 
     return (
-        <div className="bg-purple-400 p-24">
-            <h2 className="text-3xl text-center text-purple-400">Update</h2>
+        <div className="bg-purple-400 rounded-3xl p-24">
+            <h2 className="text-3xl text-center text-black">
+            <span style={{ color: 'purple', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Update As You Like']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+        <p className="border"></p>
+            
+            </h2>
             <form onSubmit={handleUpdate}>
         {/* form row tourists_spot_name and country_Name */}
        <div className="md:flex mb-8">

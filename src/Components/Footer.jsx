@@ -7,8 +7,8 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="mt-20">
-            <footer className="footer footer-center p-10 bg-primary text-primary-content">
+        <div className="mt-20 ">
+            <footer className="footer footer-center rounded-t-2xl p-10 bg-purple-400 text-primary-content">
             <aside>
                 <p className="font-extrabold text-[30px] text-green-500"><MdOutlineTravelExplore /></p>
                 <p className="font-bold">

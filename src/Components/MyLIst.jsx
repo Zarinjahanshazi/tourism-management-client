@@ -14,7 +14,7 @@ const MyLIst = () => {
 
    
     useEffect(() =>{
-        fetch('http://localhost:5000/tourist')
+        fetch('https://tourism-management-server-three.vercel.app/tourist')
         .then( res=> res.json())
         .then(data =>{
             setLIsts(data);
@@ -45,7 +45,7 @@ const MyLIst = () => {
           }).then((result) => {
             if (result.isConfirmed) {
               
-             fetch(`http://localhost:5000/tourist/${_id}`,{
+             fetch(`https://tourism-management-server-three.vercel.app/tourist/${_id}`,{
                 method: 'DELETE'
              })
              .then(res => res.json())
@@ -72,18 +72,19 @@ const MyLIst = () => {
 
 
     return (
-        <div>
+        <div className="border bg-violet-300 rounded-3xl">
 
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
     <thead>
-      <tr>
+      <tr className="text-sm text-black">
        
         
-        <th>tourists_spot_name</th>
-        <th>country_Name</th>
-        <th>average_cost</th>
+        <th>User Name</th>
+        <th>Tourists_Spot_Name</th>
+        <th>Country_Name</th>
+        <th>Average_Cost</th>
         <th>Action1</th>
         <th>Action2</th>
       </tr>
@@ -91,6 +92,7 @@ const MyLIst = () => {
     <tbody>
     {
         myList.map((p) => <tr key={p._id}>
+           <th>{p.name}</th>
            <th>{p.touristsSpotName}</th>
            <td>{p.countryName}</td>
            <td>{p.averageCost}</td>

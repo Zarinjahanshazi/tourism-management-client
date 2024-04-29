@@ -10,7 +10,7 @@ const AllTouristsSpot = () => {
     // console.log(loadedTourists);
   const [tourists,setTourists] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5000/tourist')
+    fetch('https://tourism-management-server-three.vercel.app/tourist')
     .then(res => res.json())
     .then(data =>{
         setTourists(data);
@@ -44,7 +44,7 @@ const AllTouristsSpot = () => {
 
 
     return (
-        <div>
+        <div className="text-center">
 
 <details className="dropdown">
           
@@ -60,7 +60,7 @@ const AllTouristsSpot = () => {
 
 
 
-             <h2>Tourists Length:{tourists.length}</h2>
+             {/* <h2>Tourists Length:{tourists.length}</h2> */}
             <div>
             <div className='grid mt-20 md:grid-cols-3 gap-4'>
       {

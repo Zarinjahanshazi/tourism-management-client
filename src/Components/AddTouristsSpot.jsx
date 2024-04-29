@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import { Dropdown, Menu } from 'daisyui';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const AddTouristsSpot = () => {
@@ -44,7 +45,7 @@ const AddTouristsSpot = () => {
 
         //send data to the server
 
-        fetch('http://localhost:5000/tourist',{
+        fetch('https://tourism-management-server-three.vercel.app/tourist',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -57,21 +58,37 @@ const AddTouristsSpot = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: "success",
-                    text: "Tourist Spot Added Successfully!",
+                    text: "Added Successfully!",
                     icon: "success",
-                    confirmButtonText:'cool'
+                    confirmButtonText:'okay'
                   });
             }
         })
 
     }
     return (
-        <div className="bg-green-300 p-24">
-            <h2 className="text-3xl text-center text-purple-400">This Is Add Tourists Spot</h2>
+        <div className="bg-green-300 rounded-3xl p-20">
+            <h2 className="text-3xl text-center text-purple-400"> 
+            <span style={{ color: 'purple', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Add Tourists Spot']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+            
+            </h2>
 
             <form onSubmit={handleAddCoffee}>
         {/* form name and email row */}
-       <div className="md:flex mb-8">
+        <p className="border bg-purple-700"></p>
+       <div className="md:flex mb-4">
        <div className="form-control md:w-1/2">
           <label className="label">
             <span className="label-text">User Name</span>
@@ -96,12 +113,12 @@ const AddTouristsSpot = () => {
           </label>
           <input type="text" name="touristsSpotName" placeholder="tourists_spot_name" className="input input-bordered w-full" required />
         </div>
-        <div className="form-control md:w-1/2 ml-4">
+        <div className="form-control md:w-1/2  ml-4">
           <label className="label">
             <span className="label-text">Country Name</span>
           </label>
 
-          <select name="countryName"  className="select select-secondary w-full max-w-xs">
+          <select name="countryName"  className="select select-secondary  w-full max-w-xs">
           <option disabled selected>Pick your Country Name</option>
           <option value="Bangladesh">Bangladesh</option>
           <option value="Thailand">Thailand</option>

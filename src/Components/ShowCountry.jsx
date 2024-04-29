@@ -5,9 +5,9 @@ const ShowCountry = ({showCountry}) => {
     const {_id,touristsSpotName,countryName,location,shortDescription,averageCost,seasonality,travelTime,totalVisitorsPerYear,photo} =showCountry
     return (
         <div >
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card  bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-            <img src={photo} alt="Shoes" className="rounded-xl" />
+            <img  src={photo} alt="Shoes" className="rounded-xl h-[300px]" />
         </figure>
         <div className="card-body items-center text-center">
             <div className="flex gap-4">

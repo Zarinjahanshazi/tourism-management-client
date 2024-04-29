@@ -5,7 +5,9 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../Providers/AuthProviders";
+import { FcRegisteredTrademark } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Register = () => {
@@ -73,9 +75,26 @@ const Register = () => {
         <div>
             <ToastContainer />
 
-<div>
+<div className="border rounded-2xl bg-purple-300 m-10">
      
-     <h2 className="text-3xl my-10 text-center">Please Register</h2>
+     <h2 className="text-3xl my-10 text-center">
+     <span style={{ color: 'purple', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Please Register']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+     
+     
+     </h2>
+     <img className="mx-auto w-1/2 h-[200px] rounded-2xl" src="https://i.ibb.co/BtrdDG3/125163.jpg" alt="" />
      <form
        onSubmit={handleRegister}
        className="card-body mx-auto md:w-3/4 lg:w-1/2"
@@ -137,13 +156,12 @@ const Register = () => {
            </span>
          </div>
          <label className="label">
-           <a href="#" className="label-text-alt link link-hover">
-             Forgot password?
-           </a>
+           
          </label>
        </div>
-       <div className="form-control mt-6">
-         <button className="btn btn-primary">Register</button>
+       <div className="form-control flex mt-6">
+        
+         <button className="btn  text-center items-center btn-secondary"><span className="text-3xl"><FcRegisteredTrademark /></span>Register</button>
        </div>
      </form>
 
@@ -151,9 +169,9 @@ const Register = () => {
 
      {success && <p className="text-green-700">{success}</p>}
 
-     <p className="text-center mt-4">
+     <p className="text-center mt-2 p-4">
        Already have an account?{" "}
-       <Link className=" font-bold text-red-600" to="/login">
+       <Link className=" font-bold text-blue-700" to="/login">
          Login
        </Link>
      </p>

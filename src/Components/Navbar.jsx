@@ -56,18 +56,18 @@ const Navbar = () => {
           <li>
             <NavLink to="/addTourists">Add Tourists Spot</NavLink>
           </li>
-          {user && (
+          
             <li>
               <NavLink to="/myList">My List</NavLink>
             </li>
-          )}
+          
           </Fade>
         </>
       );
     return (
         <div>
 
-<div className="navbar bg-base-100">
+<div className="navbar bg-violet-400 my-5 p-4 rounded-2xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -93,10 +93,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-[16px] md:text-2xl"> <span><p className="font-extrabold text-[30px] text-green-500"><MdOutlineTravelExplore /></p></span>TouristTrekker</a>
+          <a className="btn btn-ghost  text-[16px] md:text-2xl"> <span><p className="font-extrabold md:text-[20px] text-green-500"><MdOutlineTravelExplore /></p></span>TouristTrekker</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu text-purple-700 text-base font-bold menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end mr-4">
           {/* theme */}
@@ -141,14 +141,14 @@ const Navbar = () => {
 
          
 
-           <div className="flex">
+           <div className="flex flex-col gap-4 md:flex-row">
            {
-              user?<span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]" onClick={handleSignOut}>Logout</span>:<>
+              user?<span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-pink-400 md:bg-pink-400 md:text-white md:hover:bg-[#A62F03]" onClick={handleSignOut}>Logout</span>:<>
               <button className="">
                 <Link to="/login">
 
                 
-                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]">Login</span>
+                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-pink-400 md:bg-pink-400 md:text-white md:hover:bg-[#A62F03]">Login</span>
                   
                 </Link>
                 
@@ -156,7 +156,7 @@ const Navbar = () => {
             <button className="">
                 <Link to="/register">
                     
-                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-[#A62F03] md:bg-[#A62F03] md:text-white md:hover:bg-[#A62F03]">register</span>
+                    <span className="md:btn text-white rounded btn-sm py-2 md:px-6 bg-fuchsia-600 md:bg-fuchsia-600 ml-2 md:text-white md:hover:bg-fuchsia-600">register</span>
                   
                 </Link>
                 

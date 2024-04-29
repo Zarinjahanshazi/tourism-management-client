@@ -16,7 +16,7 @@ const Home = () => {
 
   const[countries,setCountries] = useState([])
   useEffect(() =>{
-    fetch('http://localhost:5000/countries')
+    fetch('https://tourism-management-server-three.vercel.app/countries')
     .then(res => res.json())
     .then(data =>{
       setCountries(data);
@@ -28,7 +28,7 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Tourists Length:{tourists.length}</h2>
+            {/* <h2>Tourists Length:{tourists.length}</h2> */}
             {/* banner */}
 
             <div className="carousel w-full">
@@ -66,7 +66,7 @@ const Home = () => {
 
 
 
-            <div className='grid md:grid-cols-2 gap-4'>
+            <div className='grid md:grid-cols-3 gap-4 mt-4'>
       {
          tourists.slice(0,6).map(tourist => <TouristCard key={tourist._id} tourist={tourist} tourists={tourists} setTourists={setTourists}></TouristCard>)
       }
@@ -221,7 +221,7 @@ const Home = () => {
         {/* contact us section */}
         <div className="mt-5">
             <div>
-                <div className="bg-purple-700 text-white p-4 flex justify-between gap-5">
+                <div className="bg-purple-700 text-white p-4 flex flex-col md:flex-row md:justify-between gap-5">
 
                     <div>
                         <img className="shadow-2xl rounded-3xl w-3/2 h-[500px]" src="https://i.ibb.co/2n1D86T/full-shot-travel-concept-with-landmarks.jpg" alt="" />
@@ -239,7 +239,7 @@ const Home = () => {
                         </div>
                         </Fade>
                          <Fade direction="up" triggerOnce={true}> 
-                        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mt-16">Contact With Us</h2>
+                        <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mt-16">Contact With Us</h2>
                         <div className="mt-10 text-black">
                             <div className="card bg-base-100 shadow-xl">
                                 <div className="card-body ">

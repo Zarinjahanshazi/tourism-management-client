@@ -10,7 +10,7 @@ const AllCard = ({tourist}) => {
         <div>
 
 <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={photo} alt="Shoes" /></figure>
+            <figure><img className="h-[400px]" src={photo} alt="Shoes" /></figure>
             <div className="card-body">
                 
                 <div className="flex">
@@ -29,7 +29,7 @@ const AllCard = ({tourist}) => {
                 
 
                 <div className="card-actions ">
-                <Link to={`/tourist/${_id}`}><button className="btn btn-primary">View DEtails</button></Link>
+                <Link to={`/tourist/${_id}`}><button className="btn bg-purple-700 text-white">View DEtails</button></Link>
                 </div>
             </div>
             </div>

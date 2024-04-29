@@ -50,7 +50,7 @@ const AllTouristsSpot = () => {
           
           <summary className="m-1 btn bg-[#23BE0A] text-white flex"><span>Sort By</span> <span className='text-2xl'><IoMdCheckmark /></span> </summary>
         <ul className="p-2 shadow menu dropdown-content z-[10] bg-base-100 rounded-box w-52">
-          <li><a onClick={sortByAverageCost}>cost</a></li>
+          <li><a onClick={sortByAverageCost}>Average_Cost</a></li>
           {/* <li><a >1</a></li>
           <li><a >3</a></li> */}
         </ul>
@@ -62,7 +62,7 @@ const AllTouristsSpot = () => {
 
              {/* <h2>Tourists Length:{tourists.length}</h2> */}
             <div>
-            <div className='grid mt-20 md:grid-cols-3 gap-4'>
+            <div className='grid mt-20 lg:grid-cols-3 md:grid-cols-2 gap-4'>
       {
          tourists.map(tourist => <AllCard key={tourist._id} sortByAverageCost={() =>sortByAverageCost(tourist.averageCost)} tourist={tourist} tourists={tourists} setTourists={setTourists}></AllCard>)
       }

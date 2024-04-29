@@ -66,13 +66,13 @@ const Home = () => {
 
 
 
-            <div className='grid md:grid-cols-3 gap-4 mt-4'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-4'>
       {
          tourists.slice(0,6).map(tourist => <TouristCard key={tourist._id} tourist={tourist} tourists={tourists} setTourists={setTourists}></TouristCard>)
       }
       </div>
-      <p className="text-4xl text-center">COUNTRY SECTION</p>
-      <div className="grid md:grid-cols-3 gap-4">
+      <p className="text-4xl text-center mt-10">COUNTRY SECTION</p>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
         
         {
           countries.map(country =><Countries key={country._id} country={country}></Countries>)
@@ -82,7 +82,7 @@ const Home = () => {
           <div>
 
 
-          <section className="dark:bg-gray-100 dark:text-gray-800">
+          <section className="dark:bg-gray-100 mt-10 dark:text-gray-800">
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
 		<div>
 			<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-900">

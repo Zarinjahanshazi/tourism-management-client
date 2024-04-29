@@ -93,12 +93,12 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost  text-[16px] md:text-2xl"> <span><p className="font-extrabold md:text-[20px] text-green-500"><MdOutlineTravelExplore /></p></span>TouristTrekker</a>
+          <a className="btn btn-ghost  text-[16px] md:text-2xl"> <span><p className="lg:font-extrabold md:text-[20px] text-green-500"><MdOutlineTravelExplore /></p></span>TouristTrekker</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu text-purple-700 text-base font-bold menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end mr-4">
+        <div className="navbar-end md:mr-4 -mr-5">
           {/* theme */}
 
           <label className="swap swap-rotate">

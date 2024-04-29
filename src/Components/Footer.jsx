@@ -15,6 +15,7 @@ const Footer = () => {
                 TouristTrekker Ltd. <br/>Providing best tourist spot since 2000
                 </p> 
                 <p>Copyright © <span className="font-extrabold">TouristTrekker</span> All right reserved</p>
+                <p><span className="font-extrabold">contact: </span>01724837494</p>
             </aside> 
             <nav>
                 <div className="grid grid-flow-col gap-4 text-[30px]">

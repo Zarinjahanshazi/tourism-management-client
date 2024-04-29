@@ -5,8 +5,9 @@ import { AuthContext } from "../Providers/AuthProviders";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import app from "../firebase/firebase.config";
-import { getAuth } from "firebase/auth";
-// import { GithubAuthProvider } from "firebase/auth/cordova";
+// import { getAuth, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup } from "firebase/auth";
 
 
 const LOgIn = () => {
@@ -20,7 +21,7 @@ const LOgIn = () => {
 
   const auth = getAuth(app);
   //this project
-//   const githubProvider = new GithubAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
   const handleGoogleSignIn = () => {
     console.log("hello")
@@ -37,26 +38,27 @@ const LOgIn = () => {
   };
 
 
-    //this project
-//   const handleGithubSignIn = () => {
-//     signInWithPopup(auth, githubProvider)
-//       .then((result) => {
-//         const user = result.user;
-//         updateProfile(user.displayName,user.photoURL);
+    // this project
+  const handleGithubSignIn = () => {
+    console.log("hello")
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        const user = result.user;
+        updateProfile(user.displayName,user.photoURL);
         
        
 
-//         toast.success("Login successfully");
-//         setTimeout(() => {
-//           navigate(location.state ? location.state : "/")
-//         }, 1000);
+        toast.success("Login successfully");
+        setTimeout(() => {
+          navigate(location.state ? location.state : "/")
+        }, 1000);
 
         
-//       })
-//       .catch((error) => {
-//         toast.error(error.message);
-//       });
-//   };
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -133,13 +135,13 @@ const LOgIn = () => {
             >
               Google Login
             </button>
-            {/* this project
+            {/* this project */}
             <button
               onClick={handleGithubSignIn}
               className="btn mt-6 btn-secondary"
             >
               Github Login
-            </button> */}
+            </button>
             
           </div>
         </form>

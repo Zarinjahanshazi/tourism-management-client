@@ -229,21 +229,22 @@ const Home = () => {
 
                     <div className="mr-10">
                       <Fade direction="down" triggerOnce={true}>
-                        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold">Contact With Us</h2>
+                        <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">why you should choose us</h2>
                         <div className="mt-10 text-black">
                             <div className="card bg-base-100 shadow-xl">
                                 <div className="card-body">
-                                    <h2 className="card-title"><MdHomeWork />210/7A, motikheel, Dhaka, Bangladesh</h2>
+                                    <h2 className="card-title">TouristTrekker: Elevating your tourism-focused experience with curated <br></br> destinations, insider tips, and personalized itineraries. Embark on <br></br> your dream country with confidence.</h2>
                                 </div>
                             </div>
                         </div>
                         </Fade>
                          <Fade direction="up" triggerOnce={true}> 
-                        <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mt-16">Contact With Us</h2>
-                        <div className="mt-10 text-black">
+                        <h2 className="lg:text-2xl md:text-xl text-base font-bold mt-5">Contact With Us</h2>
+                        <div className="mt-5 text-black">
                             <div className="card bg-base-100 shadow-xl">
                                 <div className="card-body ">
-                                    <p className="text-4xl flex gap-5">
+                                    <h1 className="flex items-center text-xl"><MdHomeWork />210/7A, motikheel, Dhaka, Bangladesh</h1>
+                                    <p className="text-3xl flex gap-5">
                                         <NavLink ><FaFacebookSquare /> </NavLink>
                                         <NavLink ><FaLinkedin /> </NavLink>
                                         </p>

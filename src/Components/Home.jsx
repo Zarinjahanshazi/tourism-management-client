@@ -33,7 +33,7 @@ const Home = () => {
 
             <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/njBprQ3/beautiful-sunrise-fishing-dip-nets-pakpra-phatthalung-thailand.jpg")', backgroundSize: 'cover' }}>
-    <div className="text-center text-5xl p-15  pt-20">
+    <div className="text-center lg:text-5xl text-base md:p-15  md:pt-20">
     <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
     </h1>
     <button className="btn  btn-secondary">See More</button>
@@ -44,7 +44,7 @@ const Home = () => {
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/86cZCWY/pileh-blue-lagoon-phi-phi-island-thailand.jpg")', backgroundSize: 'cover' }}>
-  <div className="text-center text-5xl p-15  pt-20">
+  <div className="text-center lg:text-5xl text-base md:p-15  md:pt-20">
     <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
     </h1>
     <button className="btn  btn-secondary">See More</button>
@@ -55,7 +55,7 @@ const Home = () => {
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/ZYdmcr9/bali-pagoda-indonesia.jpg")', backgroundSize: 'cover' }}>
-  <div className="text-center text-5xl p-15  pt-20">
+  <div className="text-center  md:p-15 lg:text-5xl text-base  md:pt-20">
     <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
     </h1>
     <button className="btn  btn-secondary">See More</button>
@@ -66,7 +66,7 @@ const Home = () => {
     </div>
   </div> 
   <div id="slide4" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/GMSnTBy/firework-display-singapore.jpg")', backgroundSize: 'cover' }}>
-  <div className="text-center text-5xl p-15  pt-20">
+  <div className="text-center lg:text-5xl text-base md:p-15  md:pt-20">
     <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
     </h1>
     <button className="btn  btn-secondary">See More</button>

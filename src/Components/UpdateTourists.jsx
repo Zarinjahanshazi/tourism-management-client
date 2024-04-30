@@ -64,7 +64,7 @@ const UpdateTourists = () => {
             if(data.modifiedCount > 0){
                 Swal.fire({
                     icon: 'success',
-                    title: 'Your product has been Updated',
+                    title: 'information Updated',
                     showConfirmButton: false,
                     timer: 1500
                   })

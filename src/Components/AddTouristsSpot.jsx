@@ -61,7 +61,7 @@ const AddTouristsSpot = () => {
       totalVisitorsPerYear === "" ||
       photo === ""
     ) {
-      toast.error("please fill the form carefully");
+      toast.error("please fill each form carefully");
     } else {
       //send data to the server
       fetch("https://tourism-management-server-three.vercel.app/tourist", {

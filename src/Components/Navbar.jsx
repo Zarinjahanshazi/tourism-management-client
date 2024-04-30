@@ -98,7 +98,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu text-purple-700 text-base font-bold menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end md:mr-4 -mr-5">
+        <div className="navbar-end md:mr-4 ">
           {/* theme */}
 
           <label className="swap swap-rotate">

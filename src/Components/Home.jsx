@@ -32,35 +32,53 @@ const Home = () => {
             {/* banner */}
 
             <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full h-[500px] rounded-2xl">
-    <img src="https://i.ibb.co/njBprQ3/beautiful-sunrise-fishing-dip-nets-pakpra-phatthalung-thailand.jpg" className="w-full rounded-2xl" />
+  <div id="slide1" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/njBprQ3/beautiful-sunrise-fishing-dip-nets-pakpra-phatthalung-thailand.jpg")', backgroundSize: 'cover' }}>
+    <div className="text-center text-5xl p-15  pt-20">
+    <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
+    </h1>
+    <button className="btn  btn-secondary">See More</button>
+    </div>
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
   </div> 
-  <div id="slide2" className="carousel-item relative w-full h-[500px] rounded-2xl">
-    <img src="https://i.ibb.co/86cZCWY/pileh-blue-lagoon-phi-phi-island-thailand.jpg" className="w-full rounded-2xl"  />
+  <div id="slide2" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/86cZCWY/pileh-blue-lagoon-phi-phi-island-thailand.jpg")', backgroundSize: 'cover' }}>
+  <div className="text-center text-5xl p-15  pt-20">
+    <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
+    </h1>
+    <button className="btn  btn-secondary">See More</button>
+    </div>
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle">❮</a> 
       <a href="#slide3" className="btn btn-circle">❯</a>
     </div>
   </div> 
-  <div id="slide3" className="carousel-item relative w-full h-[500px] rounded-2xl">
-    <img src="https://i.ibb.co/ZYdmcr9/bali-pagoda-indonesia.jpg" className="w-full rounded-2xl" />
+  <div id="slide3" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/ZYdmcr9/bali-pagoda-indonesia.jpg")', backgroundSize: 'cover' }}>
+  <div className="text-center text-5xl p-15  pt-20">
+    <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
+    </h1>
+    <button className="btn  btn-secondary">See More</button>
+    </div>
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" className="btn btn-circle">❮</a> 
       <a href="#slide4" className="btn btn-circle">❯</a>
     </div>
   </div> 
-  <div id="slide4" className="carousel-item relative w-full h-[500px] rounded-2xl">
-    <img src="https://i.ibb.co/GMSnTBy/firework-display-singapore.jpg" className="w-full rounded-2xl" />
+  <div id="slide4" className="carousel-item relative w-full h-[500px] rounded-2xl" style={{ backgroundImage: 'url("https://i.ibb.co/GMSnTBy/firework-display-singapore.jpg")', backgroundSize: 'cover' }}>
+  <div className="text-center text-5xl p-15  pt-20">
+    <h1 className="text-purple-500">Southeast Asia: A vibrant region of diverse cultures, lush landscapes, rich history, and bustling cities, offering unforgettable experiences for travelers.
+    </h1>
+    <button className="btn  btn-secondary">See More</button>
+    </div>
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide3" className="btn btn-circle">❮</a> 
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
 </div>
+
+
 
 
 

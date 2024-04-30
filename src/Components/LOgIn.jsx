@@ -158,7 +158,7 @@ const LOgIn = () => {
             {/* this project */}
             <button
               onClick={handleGithubSignIn}
-              className="btn mt-6 btn-secondary"
+              className="btn mt-6 btn-accent"
             >
               <span className="text-2xl"><FaGithub /></span>
               Github Login

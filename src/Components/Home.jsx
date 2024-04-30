@@ -71,7 +71,22 @@ const Home = () => {
          tourists.slice(0,6).map(tourist => <TouristCard key={tourist._id} tourist={tourist} tourists={tourists} setTourists={setTourists}></TouristCard>)
       }
       </div>
-      <p className="text-4xl text-center mt-10">COUNTRY SECTION</p>
+      <p className="text-4xl text-center mt-10">
+      <span style={{ color: 'purple', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['COUNTRY SECTION']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+      
+      </p>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
         
         {

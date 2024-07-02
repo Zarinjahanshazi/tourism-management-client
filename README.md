@@ -1,9 +1,9 @@
 
 # TouristTrekker
 
-# Overview: Your ultimate travel companion. Explore destinations, plan adventures, book experiences, and connect with fellow travelers on this immersive and inspiring platform.
+Overview: Your ultimate travel companion. Explore destinations, plan adventures, book experiences, and connect with fellow travelers on this immersive and inspiring platform.
 
-# Concept:This website is an immersive travel platform that helps users explore destinations, plan adventures, book experiences, and connect with fellow travelers, offering accessibility features, social media integration, and multilingual support.
+Concept:This website is an immersive travel platform that helps users explore destinations, plan adventures, book experiences, and connect with fellow travelers, offering accessibility features, social media integration, and multilingual support.
 
 ## Features
 - Major features:
